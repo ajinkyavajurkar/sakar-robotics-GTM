@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakar Robotics: India Market Entry Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f1117;
+    --ink-2: #3a3d4a;
+    --ink-3: #6b6f7e;
+    --surface: #f7f6f2;
+    --surface-2: #eeecea;
+    --surface-3: #e3e0db;
+    --accent: #d44f1e;
+    --accent-2: #f4762a;
+    --accent-light: #fdf0ea;
+    --teal: #0d6e5a;
+    --teal-light: #e0f2ec;
+    --gold: #b07a10;
+    --gold-light: #fdf5e0;
+    --blue: #1a4f8a;
+    --blue-light: #e8f0fa;
+    --border: rgba(15,17,23,0.1);
+    --border-2: rgba(15,17,23,0.18);
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(247,246,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 56px;
+  }
+
+  .nav-brand {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+  .nav-pills {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-pills::-webkit-scrollbar { display: none; }
+
+  .nav-pill {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--ink-3);
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 0.5px solid transparent;
+    cursor: pointer;
+    background: none;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .nav-pill:hover { color: var(--ink); background: var(--surface-2); }
+  .nav-pill.active { color: var(--ink); background: var(--surface-3); border-color: var(--border); font-weight: 500; }
+
+  .nav-progress {
+    font-size: 12px;
+    color: var(--ink-3);
+    font-weight: 400;
+    min-width: 48px;
+    text-align: right;
+  }
+
+  /* SLIDES */
+  .slides { padding-top: 56px; }
+
+  .slide {
+    min-height: 100vh;
+    padding: 5rem 2.5rem;
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+  .slide.active { display: flex; flex-direction: column; justify-content: center; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .slide-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* TYPOGRAPHY */
+  .overline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+  }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    font-weight: 300;
+    max-width: 640px;
+  }
+
+  .body-sm {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+    font-weight: 300;
+  }
+
+  /* CARDS */
+  .card {
+    background: #fff;
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .card-accent {
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .card-teal { border-left: 3px solid var(--teal); border-radius: 0 var(--radius) var(--radius) 0; }
+  .card-gold { border-left: 3px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; }
+  .card-blue { border-left: 3px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0; }
+
+  /* STAT PILL */
+  .stat-pill {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    background: var(--accent-light);
+    border: 0.5px solid rgba(212,79,30,0.15);
+    border-radius: 6px;
+    padding: 6px 14px;
+  }
+  .stat-pill .num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+  }
+  .stat-pill .lbl {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .stat-pill.teal { background: var(--teal-light); border-color: rgba(13,110,90,0.15); }
+  .stat-pill.teal .num, .stat-pill.teal .lbl { color: var(--teal); }
+
+  .stat-pill.gold { background: var(--gold-light); border-color: rgba(176,122,16,0.15); }
+  .stat-pill.gold .num, .stat-pill.gold .lbl { color: var(--gold); }
+
+  .stat-pill.blue { background: var(--blue-light); border-color: rgba(26,79,138,0.15); }
+  .stat-pill.blue .num, .stat-pill.blue .lbl { color: var(--blue); }
+
+  /* GRID */
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+
+  /* BADGE */
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .badge-red { background: #fde8e8; color: #8b1a1a; }
+  .badge-green { background: #e5f5ec; color: #1a6b3a; }
+  .badge-amber { background: #fdf5e0; color: #7a5000; }
+  .badge-blue { background: var(--blue-light); color: var(--blue); }
+  .badge-gray { background: var(--surface-2); color: var(--ink-2); }
+
+  /* DIVIDER */
+  hr { border: none; border-top: 0.5px solid var(--border); margin: 1.5rem 0; }
+
+  /* SPACERS */
+  .mt-1 { margin-top: 0.5rem; }
+  .mt-2 { margin-top: 1rem; }
+  .mt-3 { margin-top: 1.5rem; }
+  .mt-4 { margin-top: 2rem; }
+  .mt-5 { margin-top: 3rem; }
+
+  .mb-1 { margin-bottom: 0.5rem; }
+  .mb-2 { margin-bottom: 1rem; }
+  .mb-3 { margin-bottom: 1.5rem; }
+  .mb-4 { margin-bottom: 2rem; }
+
+  /* TAG */
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--surface-2);
+    color: var(--ink-2);
+  }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding: 0.6rem 0.75rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  td {
+    padding: 0.7rem 0.75rem;
+    border-bottom: 0.5px solid var(--border);
+    color: var(--ink-2);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.strong { color: var(--ink); font-weight: 500; }
+  td.accent { color: var(--accent); font-weight: 500; }
+  td.green { color: var(--teal); font-weight: 500; }
+
+  /* ROI CALC */
+  .roi-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .roi-input label { font-size: 13px; color: var(--ink-2); min-width: 200px; }
+  .roi-input input[type=range] { flex: 1; }
+  .roi-input .roi-val {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    min-width: 80px;
+    text-align: right;
+  }
+
+  .roi-result {
+    background: var(--ink);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .roi-result .r-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-bottom: 4px; }
+  .roi-result .r-val {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+  .roi-result .r-val.pos { color: #5de0a5; }
+  .roi-result .r-sub { font-size: 11px; opacity: 0.5; margin-top: 2px; }
+
+  /* STEP */
+  .step-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-num.accent { background: var(--accent); }
+  .step-num.teal { background: var(--teal); }
+  .step-num.gold { background: var(--gold); }
+
+  /* COMPETITOR MATRIX */
+  .matrix-row {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .matrix-row:last-child { border-bottom: none; }
+  .matrix-cell {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.85rem;
+    color: var(--ink-2);
+    border-right: 0.5px solid var(--border);
+    line-height: 1.4;
+  }
+  .matrix-cell:last-child { border-right: none; }
+  .matrix-head {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding: 0.6rem 0.75rem;
+    border-bottom: 0.5px solid var(--border);
+    border-right: 0.5px solid var(--border);
+  }
+  .matrix-head:last-child { border-right: none; }
+  .matrix-head-row {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .sakar-row .matrix-cell { background: #fff7f4; }
+  .sakar-row .matrix-cell:first-child { font-weight: 600; color: var(--accent); }
+  .dot-yes { color: var(--teal); font-weight: 600; }
+  .dot-no { color: #c0392b; font-weight: 600; }
+  .dot-partial { color: var(--gold); font-weight: 600; }
+
+  /* OBJECTION CARD */
+  .obj-card {
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+  }
+  .obj-header {
+    background: var(--surface-2);
+    padding: 0.85rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .obj-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fde8e8;
+    color: #c0392b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .obj-q { font-size: 0.92rem; font-weight: 500; color: var(--ink); }
+  .obj-body { padding: 1rem 1.25rem; }
+
+  /* TIMELINE */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+  }
+  .tl-col { padding: 1.5rem 1.25rem; border-right: 0.5px solid var(--border); }
+  .tl-col:last-child { border-right: none; }
+  .tl-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .tl-tag.phase1 { background: var(--accent-light); color: var(--accent); }
+  .tl-tag.phase2 { background: var(--gold-light); color: var(--gold); }
+  .tl-tag.phase3 { background: var(--teal-light); color: var(--teal); }
+  .tl-item {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--ink-2);
+    line-height: 1.45;
+  }
+  .tl-item::before {
+    content: '—';
+    color: var(--ink-3);
+    flex-shrink: 0;
+  }
+
+  /* COVER */
+  .cover-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .cover-meta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cover-tag {
+    font-size: 12px;
+    color: var(--ink-3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .cover-tag span { font-weight: 500; color: var(--ink-2); }
+
+  .cover-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cv-card {
+    background: #fff;
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cv-card-label { font-size: 12px; color: var(--ink-3); }
+  .cv-card-val {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  /* NAV BUTTONS */
+  .nav-btns {
+    position: fixed;
+    bottom: 2rem;
+    right: 2.5rem;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0.5px solid var(--border-2);
+    background: rgba(247,246,242,0.92);
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--ink);
+    transition: all 0.15s;
+  }
+  .nav-btn:hover { background: var(--surface-3); }
+  .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  /* REVENUE MODEL */
+  .rev-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--surface-2);
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  .rev-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+  }
+
+  /* PILL GROUP */
+  .pill-group { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
+  .pill {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 0.5px solid var(--border);
+    background: #fff;
+    color: var(--ink-2);
+  }
+  .pill.accent { background: var(--accent-light); border-color: rgba(212,79,30,0.2); color: var(--accent); }
+  .pill.teal { background: var(--teal-light); border-color: rgba(13,110,90,0.2); color: var(--teal); }
+  .pill.gold { background: var(--gold-light); border-color: rgba(176,122,16,0.2); color: var(--gold); }
+
+  /* SERUM CASE */
+  .metric-box {
+    text-align: center;
+    padding: 1.25rem 1rem;
+    background: #fff;
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+  .metric-box .m-val {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: -0.04em;
+    color: var(--teal);
+  }
+  .metric-box .m-lbl { font-size: 11px; color: var(--ink-3); margin-top: 4px; }
+
+  /* PRINT */
+  @media print {
+    nav, .nav-btns { display: none; }
+    .slide { display: flex !important; min-height: auto; page-break-after: always; }
+  }
+
+  @media (max-width: 640px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .cover-grid { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: 1fr; }
+    .roi-result { grid-template-columns: 1fr; }
+    nav { padding: 0 1rem; }
+    .slide { padding: 4rem 1.25rem; }
+    .matrix-head-row, .matrix-row { grid-template-columns: 1.4fr 1fr 1fr; }
+    .matrix-head:nth-child(n+4), .matrix-cell:nth-child(n+4) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <div class="nav-dot"></div>
+    Sakar Robotics
+  </div>
+  <div class="nav-pills" id="navPills"></div>
+  <div class="nav-progress" id="navProgress">1 / 11</div>
+</nav>
+
+<div class="slides" id="slides">
+
+  <!-- SLIDE 1: COVER -->
+  <div class="slide active" data-title="Overview">
+    <div class="slide-inner">
+      <div class="cover-grid">
+        <div>
+          <div class="overline">India Market Penetration Strategy</div>
+          <h1>Cleaning<br>robots<br>for India.</h1>
+          <p class="lead mt-3">A go-to-market playbook for Sakar Robotics, from first pilots to scalable penetration of India's facility management sector.</p>
+          <div class="cover-meta">
+            <div class="cover-tag">Target <span>Facility Management Companies</span></div>
+            <div class="cover-tag">Model <span>Capex · ₹15L–30L/unit</span></div>
+            <div class="cover-tag">Origin <span>China-sourced, multi-function</span></div>
+          </div>
+        </div>
+        <div class="cover-visual">
+          <div class="cv-card">
+            <div>
+              <div class="cv-card-label">India cleaning robots market (2025)</div>
+            </div>
+            <div class="cv-card-val">$159M</div>
+          </div>
+          <div class="cv-card">
+            <div>
+              <div class="cv-card-label">Projected market size by 2030</div>
+            </div>
+            <div class="cv-card-val" style="color: var(--teal);">$680M</div>
+          </div>
+          <div class="cv-card">
+            <div>
+              <div class="cv-card-label">Market CAGR (India, fastest in APAC)</div>
+            </div>
+            <div class="cv-card-val" style="color: var(--accent);">27.8%</div>
+          </div>
+          <div class="cv-card">
+            <div>
+              <div class="cv-card-label">India FM market (2025)</div>
+            </div>
+            <div class="cv-card-val">$159B</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: TAM + OPPORTUNITY -->
+  <div class="slide" data-title="Market & TAM">
+    <div class="slide-inner">
+      <div class="overline">Slide 01: Market Size & Opportunity</div>
+      <h2>The TAM is large.<br>The B2B slice is wide open.</h2>
+      <p class="lead mt-2">India is the fastest-growing cleaning robot market in Asia-Pacific. Commercial is still massively underpenetrated.</p>
+
+      <div class="grid-4 mt-4">
+        <div class="metric-box">
+          <div class="m-val" style="color: var(--accent);">$159M</div>
+          <div class="m-lbl">India cleaning robot market 2024 <a href="https://www.grandviewresearch.com/horizon/outlook/cleaning-robot-market/india" target="_blank" style="color: var(--accent); font-size: 10px;">[GVR]</a></div>
+        </div>
+        <div class="metric-box">
+          <div class="m-val" style="color: var(--teal);">$679M</div>
+          <div class="m-lbl">Projected by 2030 <a href="https://www.grandviewresearch.com/horizon/outlook/cleaning-robot-market/india" target="_blank" style="color: var(--teal); font-size: 10px;">[GVR]</a></div>
+        </div>
+        <div class="metric-box">
+          <div class="m-val" style="color: var(--accent);">26.5%</div>
+          <div class="m-lbl">India CAGR 2024-2030, fastest in APAC <a href="https://www.grandviewresearch.com/horizon/outlook/cleaning-robot-market/india" target="_blank" style="color: var(--accent); font-size: 10px;">[GVR]</a></div>
+        </div>
+        <div class="metric-box">
+          <div class="m-val">$5.3B</div>
+          <div class="m-lbl">India IFM market 2025 <a href="https://www.mordorintelligence.com/industry-reports/india-integrated-facility-management-market" target="_blank" style="color: var(--ink-3); font-size: 10px;">[Mordor]</a></div>
+        </div>
+      </div>
+
+      <div class="grid-3 mt-3">
+        <div class="card card-accent">
+          <h3>Policy tailwinds</h3>
+          <p class="body-sm mt-2">Swachh Bharat Mission completed 10 years in 2024 with ₹12,192 crore budget allocation. Govt mandates hygiene compliance across airports, hospitals, and public infrastructure, creating institutional demand for auditable cleaning outcomes. <a href="https://www.ibef.org/government-schemes/swachh-bharat-mission" target="_blank" style="color: var(--accent); font-size: 11px;">Source: IBEF</a></p>
+        </div>
+        <div class="card card-teal">
+          <h3>FM sector growth</h3>
+          <p class="body-sm mt-2">India's integrated FM market grows at 10.2% CAGR from $5.3B (2025) to $8.6B by 2030. Top FMCs are actively differentiating through tech to win and retain large enterprise contracts. <a href="https://www.mordorintelligence.com/industry-reports/india-integrated-facility-management-market" target="_blank" style="color: var(--teal); font-size: 11px;">Source: Mordor Intelligence</a></p>
+        </div>
+        <div class="card card-gold">
+          <h3>Commercial infra boom</h3>
+          <p class="body-sm mt-2">New airports (Navi Mumbai, Jewar, Bhogapuram), pharma SEZs, and hospital construction under Ayushman Bharat are creating large-footprint facilities that need consistent, scalable, compliance-grade cleaning. The commercial segment is growing at 33.9% CAGR within the cleaning robot market. <a href="https://www.databridgemarketresearch.com/nucleus/india-cleaning-robot-market" target="_blank" style="color: var(--gold); font-size: 11px;">Source: DBMR</a></p>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-3">
+        <div class="card" style="background: var(--ink); border: none;">
+          <div class="overline" style="color: rgba(255,255,255,0.5); margin-bottom: 0.5rem;">The strategic window</div>
+          <p style="font-size: 0.88rem; line-height: 1.6; color: rgba(255,255,255,0.75);">India's commercial cleaning robot market is the fastest growing in APAC but still dominated by residential units. The B2B commercial segment is early. FMCs are beginning to explore robotics, but no Indian player has yet built a scalable, service-backed commercial cleaning robot business. <strong style="color: #fff;">Sakar enters while distribution channels are unoccupied and reference accounts are scarce.</strong></p>
+        </div>
+        <div class="card">
+          <div class="overline" style="color: var(--ink-3);">Signals of FMC readiness</div>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+            <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.4rem 0.75rem;">ISS India opened a $15M command center in Mumbai for remote asset monitoring <a href="https://www.mordorintelligence.com/industry-reports/india-facility-management-market" target="_blank" style="color: var(--teal); font-size: 10px;">[Mordor]</a></div>
+            <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.4rem 0.75rem;">Clean India Journal: leading FMCs shifting to "Robot-as-a-Service" frameworks <a href="https://cleanindiajournal.com/a-shift-to-autonomous-service-delivery/" target="_blank" style="color: var(--teal); font-size: 10px;">[Clean India Journal]</a></div>
+            <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.4rem 0.75rem;">35% of large FM contracts in 2024 included API integration / tech requirements <a href="https://www.industryresearch.biz/market-reports/commercial-cleaning-robots-market-107178" target="_blank" style="color: var(--teal); font-size: 10px;">[IRL]</a></div>
+            <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.4rem 0.75rem;">Quess Corp secured ₹250Cr in multi-year IFM contracts (Jan 2026), signaling enterprise FM scale-up <a href="https://www.mordorintelligence.com/industry-reports/india-facility-management-market" target="_blank" style="color: var(--teal); font-size: 10px;">[Mordor]</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: TARGET PERSONA -->
+  <div class="slide" data-title="Target Persona">
+    <div class="slide-inner">
+      <div class="overline">Slide 02: Target Persona & Market Sizing</div>
+      <h2>1,200+ companies.<br>50 that matter.<br>6 to start with.</h2>
+
+      <div class="grid-2 mt-4" style="gap: 1.25rem; align-items: start;">
+
+        <!-- LEFT: FUNNEL -->
+        <div>
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem;">FMC market sizing funnel <a href="https://www.kenresearch.com/india-facility-management-and-outsourced-services-market" target="_blank" style="color: var(--ink-3); font-weight: 400; font-size: 10px;">[Ken Research]</a></div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="background: var(--ink); color: #fff; border-radius: var(--radius-sm); padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 11px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px;">Total FM companies in India</div>
+                <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; letter-spacing: -0.03em;">1,200+</div>
+                <div style="font-size: 11px; opacity: 0.5; margin-top: 2px;">Registered organised sector players</div>
+              </div>
+              <div style="font-size: 1.5rem; opacity: 0.2;">▼</div>
+            </div>
+
+            <div style="background: #3a3d4a; color: #fff; border-radius: var(--radius-sm); padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 11px; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px;">Commercially relevant (₹50Cr+ revenue)</div>
+                <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; letter-spacing: -0.03em;">~200</div>
+                <div style="font-size: 11px; opacity: 0.5; margin-top: 2px;">Top 10 hold 35–40% of total revenue <a href="https://www.mordorintelligence.com/industry-reports/india-facility-management-market" style="color: rgba(255,255,255,0.4); font-size: 10px;">[Mordor]</a></div>
+              </div>
+              <div style="font-size: 1.5rem; opacity: 0.2;">▼</div>
+            </div>
+
+            <div style="background: var(--accent); color: #fff; border-radius: var(--radius-sm); padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 11px; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px;">Hold large airport / hospital / pharma / industrial contracts</div>
+                <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; letter-spacing: -0.03em;">~50</div>
+                <div style="font-size: 11px; opacity: 0.75; margin-top: 2px;">Sakar's realistic addressable pool</div>
+              </div>
+              <div style="font-size: 1.5rem; opacity: 0.4;">▼</div>
+            </div>
+
+            <div style="background: var(--teal); color: #fff; border-radius: var(--radius-sm); padding: 1rem 1.25rem;">
+              <div style="font-size: 11px; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px;">Year 1 outreach targets (tech-ready, hygiene-critical)</div>
+              <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; letter-spacing: -0.03em;">6–10</div>
+              <div style="font-size: 11px; opacity: 0.75; margin-top: 2px;">Named, reachable, with clear entry angle</div>
+            </div>
+          </div>
+
+          <div class="card mt-3" style="background: var(--surface); border: none;">
+            <div class="overline" style="color: var(--ink-3); margin-bottom: 4px;">The untapped opportunity</div>
+            <p class="body-sm">75% of FM work in India is still done in-house by enterprises — compared to 49% globally. <a href="https://www.smergers.com/industry-watch/facility-management-industry/" target="_blank" style="color: var(--accent); font-size: 11px;">[SMERGERS]</a> As enterprises outsource more, FMCs win new contracts and need tech to stay competitive. Sakar sells into that pressure.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: TARGET TABLE -->
+        <div>
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem;">Priority FMC targets: Year 1</div>
+          <div style="border: 0.5px solid var(--border); border-radius: var(--radius); overflow: hidden; background: #fff;">
+            <div style="display: grid; grid-template-columns: 1.2fr 0.85fr 1.4fr 0.8fr; background: var(--surface);">
+              <div class="matrix-head">Company</div>
+              <div class="matrix-head">Revenue</div>
+              <div class="matrix-head">Why now</div>
+              <div class="matrix-head">Angle</div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.85fr 1.4fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">SIS / Dusters <a href="https://sisindia.com/sis-limited-reports-earnings-results-for-the-full-year-ended-march-31-2024/" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">₹12,261Cr</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">#1 FM group. Dusters (subsidiary) in 50 cities, 800+ clients, heavy on airports and hospitals.</div>
+              <div class="matrix-cell"><span class="badge badge-green">Airport / hospital</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.85fr 1.4fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Quess Corp <a href="https://www.screener.in/company/QUESS/consolidated/" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">₹15,305Cr</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">Secured ₹250Cr in multi-year IFM contracts Jan 2026. Investing in digital platforms. Actively scaling IFM.</div>
+              <div class="matrix-cell"><span class="badge badge-blue">Fleet deal</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.85fr 1.4fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Updater Services <a href="https://www.uds.in/webroot/media/relatedlinkfiles/uds-investor-presentation-q4-and-fy-23-24-file-1095.pdf" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">₹2,456Cr</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">India's 2nd largest IFM pure-play. Deep in pharma and hospitals. Direct Serum Institute adjacency. 90%+ retention.</div>
+              <div class="matrix-cell"><span class="badge badge-green">Serum ref.</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.85fr 1.4fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">ISS India <a href="https://www.mordorintelligence.com/industry-reports/india-facility-management-market" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">Global ($11B+)</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">Opened $15M Mumbai command center Oct 2025. Global HQ pursues robotics. India arm follows global mandate.</div>
+              <div class="matrix-cell"><span class="badge badge-blue">Innovation</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.85fr 1.4fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Sodexo India <a href="https://www.mordorintelligence.com/industry-reports/india-facility-management-market" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">Global ($22B+)</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">Launched tech-led FM services in India 2025. Sustainability mandates from Paris HQ create strong pull for automation.</div>
+              <div class="matrix-cell"><span class="badge badge-blue">Sustainability</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.85fr 1.4fr 0.8fr;">
+              <div class="matrix-cell strong">CLR / SMC / BVG <a href="https://www.expertmarketresearch.com/blogs/top-indian-facility-management-companies" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">₹200–500Cr est.</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">Mid-tier domestic players in pharma, hospitals, and industrial. Early adopter profile. Less procurement complexity than MNCs.</div>
+              <div class="matrix-cell"><span class="badge badge-amber">Early adopter</span></div>
+            </div>
+          </div>
+
+          <div class="grid-2 mt-3" style="gap: 0.75rem;">
+            <div class="card" style="padding: 1rem;">
+              <div class="overline" style="color: var(--ink-3); margin-bottom: 4px;">The actual buyer</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); line-height: 1.5;">
+                <div style="margin-bottom: 4px;"><strong style="color: var(--ink);">VP Operations / COO</strong> — champions robots if they improve margin</div>
+                <div style="margin-bottom: 4px;"><strong style="color: var(--ink);">BD / Contracts Head</strong> — uses robots as a bid differentiator</div>
+                <div><strong style="color: var(--ink);">Procurement / Finance</strong> — approves capex, needs payback math</div>
+              </div>
+            </div>
+            <div class="card" style="padding: 1rem; background: var(--surface); border: none;">
+              <div class="overline" style="color: var(--ink-3); margin-bottom: 4px;">Secondary: self-managed FM</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); line-height: 1.6;">
+                Pharma parks (GMP), private hospital chains (NABH), large factories, and new airport operators — enterprises with in-house FM where hygiene is a compliance requirement, not a preference.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: COMPETITIVE LANDSCAPE -->
+  <div class="slide" data-title="Competition">
+    <div class="slide-inner">
+      <div class="overline">Slide 03: Competitive Landscape</div>
+      <h2>Global players price<br>you out. Indian players<br>can't service you.</h2>
+      <p class="lead mt-2">Two distinct competitive sets. Sakar's gap sits between both of them.</p>
+
+      <div class="grid-2 mt-4" style="gap: 1.25rem;">
+
+        <!-- LEFT: GLOBAL PLAYERS -->
+        <div>
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem;">Global / MNC players</div>
+          <div style="border: 0.5px solid var(--border); border-radius: var(--radius); overflow: hidden; background: #fff;">
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.9fr 0.8fr; background: var(--surface);">
+              <div class="matrix-head">Company</div>
+              <div class="matrix-head">Price</div>
+              <div class="matrix-head">India presence</div>
+              <div class="matrix-head">Threat</div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.9fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Nilfisk <a href="https://www.nilfisk.com/global/professional/news-and-articles/nilfisk-teams-up-with-lionsbot-to-create-new-autonomous-cleaning-machine/" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">₹30L–60L+</div>
+              <div class="matrix-cell dot-yes" style="font-size: 0.78rem;">India subsidiary + dealer net</div>
+              <div class="matrix-cell"><span class="badge badge-red">High</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.9fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Tennant / Kärcher</div>
+              <div class="matrix-cell">₹35L–80L+</div>
+              <div class="matrix-cell dot-partial" style="font-size: 0.78rem;">Distributor network</div>
+              <div class="matrix-cell"><span class="badge badge-amber">Medium</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.9fr 0.8fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Gaussian Robotics <a href="https://www.intelmarketresearch.com/commercialindustrial-floor-robots-2025-2032-282-5138" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[src]</a></div>
+              <div class="matrix-cell">₹18L–35L</div>
+              <div class="matrix-cell dot-no" style="font-size: 0.78rem;">No India office</div>
+              <div class="matrix-cell"><span class="badge badge-amber">Medium</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.9fr 0.8fr;">
+              <div class="matrix-cell strong">ISS / Sodexo (self-deploy)</div>
+              <div class="matrix-cell">Internal capex</div>
+              <div class="matrix-cell dot-yes" style="font-size: 0.78rem;">India subsidiaries</div>
+              <div class="matrix-cell"><span class="badge badge-amber">Indirect</span></div>
+            </div>
+          </div>
+
+          <div class="card card-teal mt-3">
+            <h3>The gap Sakar fills</h3>
+            <p class="body-sm mt-1">Gaussian Robotics is priced comparably but has no India service infrastructure. Nilfisk has service depth but costs 2–3x more. Sakar is the only player combining Chinese-level pricing with India-level service accountability.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: INDIAN DOMESTIC PLAYERS -->
+        <div>
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem;">Indian domestic players</div>
+          <div style="border: 0.5px solid var(--border); border-radius: var(--radius); overflow: hidden; background: #fff;">
+            <div style="display: grid; grid-template-columns: 1.1fr 0.85fr 1.3fr 0.7fr; background: var(--surface);">
+              <div class="matrix-head">Company</div>
+              <div class="matrix-head">Revenue</div>
+              <div class="matrix-head">What they do</div>
+              <div class="matrix-head">Overlap</div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.1fr 0.85fr 1.3fr 0.7fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Genrobotics <a href="https://genrobotics.org" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[site]</a></div>
+              <div class="matrix-cell">₹32Cr FY25</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">Sewer/manhole cleaning (Bandicoot robot). Deployed across 26 states. ₹80Cr Singapore contract.</div>
+              <div class="matrix-cell"><span class="badge badge-gray">Low</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.1fr 0.85fr 1.3fr 0.7fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Peppermint Robotics <a href="https://peppermintrobotics.com" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[site]</a></div>
+              <div class="matrix-cell">₹6.26Cr FY24</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">Industrial floor-cleaning robots. Customers in India, Middle East, Japan. Raised ₹34Cr Series A in 2025.</div>
+              <div class="matrix-cell"><span class="badge badge-red">High</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.1fr 0.85fr 1.3fr 0.7fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Milagrow HumanTech <a href="https://milagrow.com" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[site]</a></div>
+              <div class="matrix-cell">Target: ₹100Cr</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">India's first robot vacuum brand (since 2011). Broad consumer presence. Expanding into commercial.</div>
+              <div class="matrix-cell"><span class="badge badge-amber">Medium</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.1fr 0.85fr 1.3fr 0.7fr; border-bottom: 0.5px solid var(--border);">
+              <div class="matrix-cell strong">Vividobots <a href="https://vividobots.com" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[site]</a></div>
+              <div class="matrix-cell">~$1.1M est.</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">High-rise facade and exterior cleaning robots. Seed round by Inflection Point Ventures (2025).</div>
+              <div class="matrix-cell"><span class="badge badge-gray">Low</span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.1fr 0.85fr 1.3fr 0.7fr;">
+              <div class="matrix-cell strong">Robolta <a href="https://robolta.com" target="_blank" style="color: var(--ink-3); font-size: 10px; font-weight: 400;">[site]</a></div>
+              <div class="matrix-cell">No disclosure</div>
+              <div class="matrix-cell" style="font-size: 0.78rem;">Consumer AI cleaning robots. Opened India's first AI robotic cleaning showroom in Surat (2024).</div>
+              <div class="matrix-cell"><span class="badge badge-gray">Low</span></div>
+            </div>
+          </div>
+
+          <div class="card card-accent mt-3">
+            <h3>The one to watch: Peppermint Robotics</h3>
+            <p class="body-sm mt-1">Only Indian company building commercial-grade floor-cleaning robots at scale with disclosed revenue growth (₹2.71Cr to ₹6.26Cr YoY) and international customers. They will compete for the same FMC relationships. Sakar's counter: superior price point and local service SLA.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: DIFFERENTIATION -->
+  <div class="slide" data-title="Differentiation">
+    <div class="slide-inner">
+      <div class="overline">Slide 04: What Makes Sakar Different</div>
+      <h2>Price of China.<br>Support of India.</h2>
+      <p class="lead mt-2">No competitor in India today offers this combination. It's not a product differentiator. It's a business model differentiator.</p>
+
+      <div class="grid-3 mt-4">
+        <div class="card">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">🤖</div>
+          <h3>Multi-function hardware</h3>
+          <p class="body-sm mt-2">Scrub, sweep, and mop in one unit. Facilities don't need to buy three machines or manage multiple vendors. One robot, one contract, one accountability chain.</p>
+          <div class="pill-group">
+            <span class="pill">Scrub</span>
+            <span class="pill">Sweep</span>
+            <span class="pill">Mop</span>
+          </div>
+        </div>
+        <div class="card" style="border: 1.5px solid var(--accent); position: relative;">
+          <div style="position: absolute; top: -10px; left: 16px; background: var(--accent); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;">Core advantage</div>
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 0.5rem;">🛠️</div>
+          <h3>Domestic after-sales support</h3>
+          <p class="body-sm mt-2">Local engineers, local spare parts stocking, and response SLAs measured in hours, not weeks. The biggest fear when buying a robot in India is: who fixes it when it breaks? Sakar answers that question before it's asked.</p>
+          <div class="pill-group">
+            <span class="pill accent">On-site SLA</span>
+            <span class="pill accent">Local spare parts</span>
+            <span class="pill accent">Hindi/regional support</span>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">💰</div>
+          <h3>Price-competitive at ₹15L–30L</h3>
+          <p class="body-sm mt-2">40–60% cheaper than European equivalents at comparable spec. For an FMC pricing a new airport or hospital contract, a ₹20L robot vs a ₹50L robot changes the financial model entirely.</p>
+          <div class="pill-group">
+            <span class="pill teal">₹15L–30L vs ₹30L–80L</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3 mt-3">
+        <div class="card">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">✅</div>
+          <h3>Proven in India</h3>
+          <p class="body-sm mt-2">Not a pilot sold on a PowerPoint. Serum Institute, one of India's most demanding pharma environments, has validated the hardware in real operating conditions.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">🔄</div>
+          <h3>Consumables revenue</h3>
+          <p class="body-sm mt-2">Brushes, pads, cleaning solutions, and filter replacements create a recurring revenue stream post-sale. European players charge a premium on consumables. Sakar can price this competitively while building a long-term account relationship.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">🤝</div>
+          <h3>Channel flexibility</h3>
+          <p class="body-sm mt-2">Can sell direct to large FMCs, partner with regional cleaning equipment distributors, or white-label for an FMC's own branded fleet, a flexibility no multinational offers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: OBJECTION HANDLING -->
+  <div class="slide" data-title="Objection Handling">
+    <div class="slide-inner">
+      <div class="overline">Slide 05: Tackling the Hard Objections</div>
+      <h2>Every objection.<br>One answer each.</h2>
+      <p class="lead mt-2">Know these four cold. They will come up in every sales conversation in India.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem;">
+
+        <div class="obj-card">
+          <div class="obj-header">
+            <div class="obj-icon">1</div>
+            <div class="obj-q">"Labor is cheap here. A worker costs ₹15,000/month. Your robot is ₹20 lakhs."</div>
+          </div>
+          <div class="obj-body" style="padding: 0.85rem 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.5rem 0.75rem;">15 to 20% absenteeism rate in cleaning. Robots never call in sick.</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.5rem 0.75rem;">ESIC, PF, supervision, and training add 30–35% to actual labor cost</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Payback in 18–24 months; after that it's pure margin gain</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Robots run 16–20 hours/day with no shift constraints</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Auditable cleaning logs satisfy ISO and pharma regulatory inspections</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--teal-light); border-radius: 6px; padding: 0.5rem 0.75rem;">FMCs keep same contract value, reduce manpower, pocket the margin</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="obj-card">
+          <div class="obj-header">
+            <div class="obj-icon">2</div>
+            <div class="obj-q">"What if it breaks down? I can't afford downtime at my client's site."</div>
+          </div>
+          <div class="obj-body" style="padding: 0.85rem 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--accent-light); border-radius: 6px; padding: 0.5rem 0.75rem;">24-hour response SLA for all critical sites</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--accent-light); border-radius: 6px; padding: 0.5rem 0.75rem;">48-hour resolution commitment backed by local engineers</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--accent-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Regional spare parts depot eliminates long shipping wait</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--accent-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Year 1 service bundled at no extra cost</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--accent-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Same-city support team, not a call center in another country</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--accent-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Manual backup team bridges any gap. Robot is additive, not a single point of failure</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="obj-card">
+          <div class="obj-header">
+            <div class="obj-icon">3</div>
+            <div class="obj-q">"My client won't pay more just because I'm using robots."</div>
+          </div>
+          <div class="obj-body" style="padding: 0.85rem 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--gold-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Don't raise price. Reduce cost. Same contract, fewer workers on site.</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--gold-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Margin improvement goes 100% to the FMC, not the client</div>
+              <div style="font-size: 0.82rem; color: var(--ink-2); background: var(--gold-light); border-radius: 6px; padding: 0.5rem 0.75rem;">Use robots as a bid differentiator on new contracts, not a cost add-on</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: REVENUE MODEL -->
+  <div class="slide" data-title="Revenue Model">
+    <div class="slide-inner">
+      <div class="overline">Slide 07: Revenue Model</div>
+      <h2>Three revenue<br>streams. One relationship.</h2>
+      <p class="lead mt-2">Hardware is the entry point. Consumables and service contracts are where Sakar builds a defensible, recurring business.</p>
+
+      <div class="grid-3 mt-4">
+        <div class="card">
+          <div class="overline" style="color: var(--accent);">Stream 01</div>
+          <h3>Hardware sales</h3>
+          <p class="body-sm mt-2">Primary revenue driver. Each unit at ₹15L–30L generates ₹5L–12L gross margin depending on volume and model mix. Volume discounts for fleet purchases of 5+ units incentivize FMC adoption at scale.</p>
+          <div class="rev-bar mt-2"><div class="rev-fill" style="width: 60%; background: var(--accent);"></div></div>
+          <div class="body-sm mt-1" style="color: var(--ink-3);">~60% of revenue (Year 1)</div>
+        </div>
+        <div class="card">
+          <div class="overline" style="color: var(--teal);">Stream 02</div>
+          <h3>Consumables</h3>
+          <p class="body-sm mt-2">Brushes, scrubbing pads, filters, and cleaning solution, recurring quarterly or monthly orders per robot. At ₹8,000–15,000/month per unit, a fleet of 20 robots generates ₹2L–3L/month in consumables alone.</p>
+          <div class="rev-bar mt-2"><div class="rev-fill" style="width: 25%; background: var(--teal);"></div></div>
+          <div class="body-sm mt-1" style="color: var(--ink-3);">~25% of revenue (Year 2+)</div>
+        </div>
+        <div class="card">
+          <div class="overline" style="color: var(--gold);">Stream 03</div>
+          <h3>AMC / Service contracts</h3>
+          <p class="body-sm mt-2">Annual Maintenance Contracts at 8–12% of hardware value. A ₹20L robot generates ₹1.6L–2.4L/year in AMC revenue. Stackable, predictable, and the key to long-term customer lock-in.</p>
+          <div class="rev-bar mt-2"><div class="rev-fill" style="width: 15%; background: var(--gold);"></div></div>
+          <div class="body-sm mt-1" style="color: var(--ink-3);">~15% of revenue (Year 2+)</div>
+        </div>
+      </div>
+
+      <div class="card mt-3">
+        <h3>Revenue trajectory (illustrative, 10-unit starting fleet)</h3>
+        <div class="grid-4 mt-3">
+          <div class="metric-box">
+            <div class="m-val" style="color: var(--accent);">₹2–3Cr</div>
+            <div class="m-lbl">Year 1 (hardware)</div>
+          </div>
+          <div class="metric-box">
+            <div class="m-val" style="color: var(--teal);">₹35–50L</div>
+            <div class="m-lbl">Year 2 consumables</div>
+          </div>
+          <div class="metric-box">
+            <div class="m-val" style="color: var(--gold);">₹20–30L</div>
+            <div class="m-lbl">Year 2 AMC</div>
+          </div>
+          <div class="metric-box">
+            <div class="m-val">₹5Cr+</div>
+            <div class="m-lbl">Year 3 blended target</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-accent mt-3">
+        <p class="body-sm"><strong>Fleet deal pricing strategy:</strong> Offer a 10% discount at 3 units, 15% at 5 units, 20% at 10+ units. This accelerates FMC adoption and front-loads the relationship economics. Recover margin on consumables and AMC over 3–5 years.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: GTM MOTION -->
+  <div class="slide" data-title="GTM Motion">
+    <div class="slide-inner">
+      <div class="overline">Slide 08: Go-to-Market Motion</div>
+      <h2>Whom to call.<br>What to say.<br>In what order.</h2>
+
+      <div class="grid-2 mt-4">
+        <div>
+          <h3 class="mb-3">Outreach priority order</h3>
+
+          <div class="step-row">
+            <div class="step-num accent">1</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">SIS India: VP Operations</div>
+              <p class="body-sm">Already one of India’s largest FM companies. Pitch as a fleet supplier and service partner, not a competitor to their existing vendors.</p>
+              <div class="tag mt-1">Warm</div>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num accent">2</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">Updater Services (UDS): COO</div>
+              <p class="body-sm">Strong in pharma and hospital FM. Serum Institute pilot is a direct reference account. Open with: "We've done this in your exact vertical."</p>
+              <div class="tag mt-1">Reference-first</div>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num accent">3</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">Dusters Total: BD Head</div>
+              <p class="body-sm">Strong in commercial and retail. Airport contracts are their growth area. Lead with the airport cleaning use case: footfall, compliance, public visibility.</p>
+              <div class="tag mt-1">Airport angle</div>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num accent">4</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">ISS / Sodexo India: Innovation Lead</div>
+              <p class="body-sm">MNCs are often easier to move on tech adoption if framed as "innovation" that their global HQ is already pursuing. Ask who owns their robotics/automation agenda.</p>
+              <div class="tag mt-1">Innovation framing</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="mb-3">Messaging framework</h3>
+
+          <div class="card card-accent mb-2">
+            <div class="overline" style="color: var(--accent); margin-bottom: 4px;">Opening line (cold)</div>
+            <p class="body-sm">"We've deployed autonomous cleaning robots at Serum Institute, one of India's most demanding pharma environments. I wanted to share how [FMC name] could use the same to improve margins on your hospital/pharma contracts."</p>
+          </div>
+
+          <div class="card card-teal mb-2">
+            <div class="overline" style="color: var(--teal); margin-bottom: 4px;">The value prop (30 seconds)</div>
+            <p class="body-sm">Multi-function robots at ₹15L to 30L, with local engineers, local spare parts, and response SLAs. Not China-shipped-and-forgotten. We're here.</p>
+          </div>
+
+          <div class="card card-gold">
+            <div class="overline" style="color: var(--gold); margin-bottom: 4px;">The ask</div>
+            <p class="body-sm">Not a sale. A 30-day site pilot. Let the robot run in your facility for one month. We handle setup, maintenance, and reporting. You see the numbers.</p>
+          </div>
+
+          <div class="card mt-2" style="background: var(--surface);">
+            <div class="overline" style="color: var(--ink-3); margin-bottom: 4px;">Never say in cold outreach</div>
+            <p class="body-sm">Don't mention "cheap Chinese robots." Don't compare to European brands unprompted. Don't lead with specs. Lead with the Serum reference and the pilot offer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: SERUM CASE STUDY -->
+  <div class="slide" data-title="Serum Pilot">
+    <div class="slide-inner">
+      <div class="overline">Slide 09: Proof Point</div>
+      <h2>The Serum Institute<br>case study.</h2>
+      <p class="lead mt-2">This is Sakar's single most powerful sales asset. Build it into a formal one-page case study. Every conversation should reference it.</p>
+
+      <div class="card mt-4" style="border: 1.5px solid var(--teal);">
+        <div class="grid-2">
+          <div>
+            <div class="overline" style="color: var(--teal);">Client context</div>
+            <h3 class="mt-1">Serum Institute of India, Pune</h3>
+            <p class="body-sm mt-2">World's largest vaccine manufacturer by volume. Operates in highly regulated, sterile environments where cleanliness is not optional. It's a compliance requirement tied to WHO and GMP certifications.</p>
+            <p class="body-sm mt-2">This is the hardest possible environment to deploy a cleaning robot in India. If it works here, it works everywhere.</p>
+
+            <div class="mt-3">
+              <div class="overline" style="color: var(--ink-3);">The challenge they faced</div>
+              <p class="body-sm mt-1">Maintaining consistent cleaning standards across large manufacturing and warehouse floors with manual labor: managing absenteeism, ensuring cleaning logs for audits, and reducing contamination risk.</p>
+            </div>
+          </div>
+          <div>
+            <div class="overline" style="color: var(--teal);">Outcome highlights</div>
+            <div class="grid-2 mt-2" style="gap: 0.75rem;">
+              <div class="metric-box">
+                <div class="m-val">24/7</div>
+                <div class="m-lbl">Cleaning coverage</div>
+              </div>
+              <div class="metric-box">
+                <div class="m-val">0</div>
+                <div class="m-lbl">Absenteeism incidents</div>
+              </div>
+              <div class="metric-box">
+                <div class="m-val">100%</div>
+                <div class="m-lbl">Audit log compliance</div>
+              </div>
+              <div class="metric-box">
+                <div class="m-val">GMP</div>
+                <div class="m-lbl">Standard maintained</div>
+              </div>
+            </div>
+
+            <div class="card mt-3" style="background: var(--teal-light); border: none;">
+              <div class="overline" style="color: var(--teal); margin-bottom: 4px;">How to use this in sales</div>
+              <p class="body-sm">Lead every hospital, pharma, and high-compliance facility conversation with this reference. Offer to connect prospects directly with the Serum FM team. A warm reference in this sector closes faster than any pitch deck.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3 mt-3">
+        <div class="card">
+          <h3>For pharma FMCs</h3>
+          <p class="body-sm mt-2">Serum is the reference. Lead with regulatory compliance and audit trail as the primary value. Price is secondary.</p>
+        </div>
+        <div class="card">
+          <h3>For airport FMCs</h3>
+          <p class="body-sm mt-2">Translate the 24/7 coverage angle. Airports don't close. Manual cleaning is shift-based. Robots cover the gaps, especially post-midnight to 5am when footfall is low.</p>
+        </div>
+        <div class="card">
+          <h3>For industrial FMCs</h3>
+          <p class="body-sm mt-2">Translate the large-floor-area efficiency. A robot covers 2,000–3,000 sq meters per session consistently. Manual workers cover a fraction of that with variable quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: NETWORK & LEVERAGE -->
+  <div class="slide" data-title="Network & Leverage">
+    <div class="slide-inner">
+      <div class="overline">Slide 10: Network & Leverage</div>
+      <h2>Shortcuts that<br>others don't see.</h2>
+      <p class="lead mt-2">India's B2B market runs on relationships and references. Don't just go direct. Build a network that sends deals to Sakar.</p>
+
+      <div class="grid-2 mt-4">
+        <div>
+          <h3 class="mb-3">Channels to activate</h3>
+
+          <div class="card card-accent mb-2">
+            <h3>Industry associations</h3>
+            <p class="body-sm mt-1">Indian Facility Management Council (IFMC), CII, and FICCI have facility management working groups. Present at one event as a thought leader on "autonomous cleaning in India." One talk generates 10 warm leads.</p>
+          </div>
+
+          <div class="card card-teal mb-2">
+            <h3>Trade shows</h3>
+            <p class="body-sm mt-1">CleanIndia 2025 (Mumbai), BuildTech Expo, and Hospital Management Asia are where FM decision-makers gather. A live demo of the robot on the floor beats a hundred cold calls.</p>
+          </div>
+
+          <div class="card card-gold mb-2">
+            <h3>Cleaning equipment distributors</h3>
+            <p class="body-sm mt-1">India has a network of industrial cleaning equipment dealers (Eureka Forbes B2B division, regional Kärcher distributors). Some are looking for alternatives. A dealer who already calls on FMCs every month can carry Sakar's robots into conversations Sakar can't reach alone.</p>
+          </div>
+
+          <div class="card">
+            <h3>Real estate / project consultants</h3>
+            <p class="body-sm mt-1">Large real estate developers (Embassy, DLF, Godrej Properties) often specify FM requirements during construction. Getting Sakar into a green-field specification means the FMC that wins the contract inherits Sakar as the robot vendor.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="mb-3">What to leverage now</h3>
+
+          <div class="step-row">
+            <div class="step-num teal">1</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">Serum Institute reference</div>
+              <p class="body-sm">Use as an introduction in every pharma and hospital conversation. Ask Serum for a written testimonial and the FM team's willingness to take reference calls.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num teal">2</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">Chinese manufacturer relationship</div>
+              <p class="body-sm">The manufacturer likely has references from other APAC deployments: Singapore, Indonesia, Middle East. Use global case studies to validate quality before India references exist.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num teal">3</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">LinkedIn outreach to FM heads</div>
+              <p class="body-sm">FMC decision-makers are active on LinkedIn. A short video of the robot cleaning a large floor area, with the Serum Institute context, is the most shareable content Sakar can produce.</p>
+            </div>
+          </div>
+
+          <div class="step-row">
+            <div class="step-num teal">4</div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.92rem;">FMC-as-partner model</div>
+              <p class="body-sm">Offer UDS, Quess, or SIS a co-sell arrangement: they bring the client, Sakar supplies and services the robot, they earn a referral margin. Aligns incentives without requiring Sakar to build a large direct sales team immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: 90-DAY PLAN -->
+  <div class="slide" data-title="90-Day Plan">
+    <div class="slide-inner">
+      <div class="overline">Slide 11: Action Plan</div>
+      <h2>The first<br>90 days.</h2>
+      <p class="lead mt-2">Three phases. Each builds on the last. The goal by Day 90 is to have 3–5 FMCs in active pilot conversations and one fleet deal in negotiation.</p>
+
+      <div class="timeline mt-4">
+        <div class="tl-col">
+          <div class="tl-tag phase1">Days 1–30 · Foundation</div>
+          <div class="tl-item">Produce the Serum Institute case study as a one-pager (PDF + video)</div>
+          <div class="tl-item">Build the ROI calculator as a shareable web tool or Excel template</div>
+          <div class="tl-item">Define AMC pricing and service SLA commitments</div>
+          <div class="tl-item">Map top 20 target FMCs with contact names using LinkedIn + Zaubacorp</div>
+          <div class="tl-item">Register or attend CleanIndia / IFMC events</div>
+          <div class="tl-item">Create a 60-second demo video of the robot in the Serum facility</div>
+        </div>
+        <div class="tl-col">
+          <div class="tl-tag phase2">Days 31–60 · Outreach</div>
+          <div class="tl-item">Launch LinkedIn outreach to VP Ops and BD heads at top 10 FMCs</div>
+          <div class="tl-item">Send cold email to FM heads at 5 large hospitals and 3 pharma parks</div>
+          <div class="tl-item">Pitch 2–3 regional cleaning equipment distributors for co-sell arrangement</div>
+          <div class="tl-item">Request introductions from Serum FM team to peer companies</div>
+          <div class="tl-item">Offer 30-day free pilot to first 2 new enterprise accounts</div>
+          <div class="tl-item">Present at one trade show or industry event</div>
+        </div>
+        <div class="tl-col">
+          <div class="tl-tag phase3">Days 61–90 · Convert</div>
+          <div class="tl-item">Convert 1–2 pilots to purchase orders with AMC attached</div>
+          <div class="tl-item">Negotiate first fleet deal (3+ units) with volume pricing</div>
+          <div class="tl-item">Finalize consumables supply chain and pricing list</div>
+          <div class="tl-item">Set up local spare parts depot (Mumbai or Pune)</div>
+          <div class="tl-item">Define target for Year 1: 10 units sold, 5 AMC contracts</div>
+          <div class="tl-item">Review and prioritize pipeline for Q2 outreach</div>
+        </div>
+      </div>
+
+      <div class="grid-3 mt-3">
+        <div class="card">
+          <div class="overline" style="color: var(--accent);">Priority 1 markets</div>
+          <div class="pill-group">
+            <span class="pill accent">Pune (Serum base)</span>
+            <span class="pill accent">Mumbai</span>
+            <span class="pill accent">Hyderabad</span>
+          </div>
+          <p class="body-sm mt-2">Start where the pharma and airport infrastructure is dense and where Sakar already has a reference presence.</p>
+        </div>
+        <div class="card">
+          <div class="overline" style="color: var(--teal);">Priority 2 markets</div>
+          <div class="pill-group">
+            <span class="pill teal">Delhi-NCR</span>
+            <span class="pill teal">Bengaluru</span>
+            <span class="pill teal">Chennai</span>
+          </div>
+          <p class="body-sm mt-2">Large corporate and industrial FM markets. Activate once 2–3 case studies exist and local service capability is in place.</p>
+        </div>
+        <div class="card">
+          <div class="overline" style="color: var(--gold);">Success metrics</div>
+          <div class="pill-group">
+            <span class="pill gold">10 units Year 1</span>
+            <span class="pill gold">3 AMC contracts</span>
+            <span class="pill gold">5 FMC meetings</span>
+          </div>
+          <p class="body-sm mt-2">Track pipeline value, pilot conversion rate, and consumables pull-through rate per installed unit monthly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- NAV BUTTONS -->
+<div class="nav-btns">
+  <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)" disabled>←</button>
+  <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">→</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const navPills = document.getElementById('navPills');
+  const navProgress = document.getElementById('navProgress');
+  let current = 0;
+
+  slides.forEach((s, i) => {
+    const pill = document.createElement('button');
+    pill.className = 'nav-pill' + (i === 0 ? ' active' : '');
+    pill.textContent = s.dataset.title;
+    pill.onclick = () => goTo(i);
+    navPills.appendChild(pill);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    navPills.children[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    navPills.children[current].classList.add('active');
+    navPills.children[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    navProgress.textContent = (current + 1) + ' / ' + slides.length;
+    document.getElementById('prevBtn').disabled = current === 0;
+    document.getElementById('nextBtn').disabled = current === slides.length - 1;
+  }
+
+  function changeSlide(dir) { goTo(Math.max(0, Math.min(slides.length - 1, current + dir))); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changeSlide(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+  });
+
+  // ROI Calculator removed
+</script>
+</body>
+</html>
